@@ -1,0 +1,38 @@
+{
+  "name": "remark-syntax-highlight",
+  "version": "0.0.0",
+  "description": "Syntax highlight code blocks with a custom highlight function in remark",
+  "keywords": [
+    "highlight",
+    "syntax",
+    "markdown",
+    "remark"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satya164/remark-syntax-highlight.git"
+  },
+  "author": "Satyajit Sahoo <satyajit.happy@gmail.com> (https://github.com/satya164/)",
+  "scripts": {
+    "lint": "eslint .",
+    "precommit": "yarn lint",
+    "release": "release-it"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.4",
+    "conventional-changelog-cli": "^2.0.5",
+    "eslint": "^4.19.1",
+    "eslint-config-satya164": "^1.0.2",
+    "husky": "^0.14.3",
+    "prettier": "^1.13.5",
+    "release-it": "^7.6.1"
+  }
+}
