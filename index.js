@@ -6,8 +6,9 @@ module.exports = function highlighter(options) {
     visit(ast, 'code', function(node) {
       if (node.lang) {
         var highlight = function(code) {
-          var html = code == null ? escape(node.value) : node.lang;
+          var html = code == null ? escape(node.value) : code;
 
+          node.lang = 'text';
           node.type = 'html';
           node.value = [
             '<pre>',
