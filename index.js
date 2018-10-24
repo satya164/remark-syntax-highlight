@@ -8,7 +8,6 @@ module.exports = function highlighter(options) {
         var highlight = function(code) {
           var html = code == null ? escape(node.value) : code;
 
-          node.lang = 'text';
           node.type = 'html';
           node.value = [
             '<pre>',
