@@ -24,27 +24,16 @@ jobs:
           root: .
           paths: .
   lint:
-      <<: *defaults
-      steps:
-        - attach_workspace:
-            at: ~/project
-        - run: |
-            yarn lint
-  unit-test:
-      <<: *defaults
-      steps:
-        - attach_workspace:
-            at: ~/project
-        - run: |
-            yarn test --coverage
-            cat ./coverage/lcov.info | ./node_modules/.bin/codecov
-        - store_artifacts:
-            path: coverage
-            destination: coverage
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run: |
+          yarn lint
 
 workflows:
   version: 2
-  build-and-test:
+  build:
     jobs:
       - install-dependencies
       - lint:
