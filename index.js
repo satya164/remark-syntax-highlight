@@ -3,7 +3,7 @@ var escape = require('escape-html');
 
 module.exports = function highlighter(options) {
   return function(ast) {
-    visit(ast, '*', function(node) {
+    visit(ast, 'code', function(node) {
       if (node.lang) {
         var highlight = function(code) {
           var html = code == null ? escape(node.value) : node.lang;
